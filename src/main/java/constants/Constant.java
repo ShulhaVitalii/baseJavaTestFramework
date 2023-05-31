@@ -8,5 +8,7 @@ public class Constant {
 
     public static class Urls{
         public static final String AVTO_RIA_HOME_URL = "https://auto.ria.com/";
+
+        public static final String ORANGE_HRM_URL = "https://opensource-demo.orangehrmlive.com/";
     }
 }

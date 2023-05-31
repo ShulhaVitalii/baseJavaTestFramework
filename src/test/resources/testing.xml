@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testing.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testing.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test name="Test 1">
         <classes>
-            <class name="tests.selectvolkswagen.SelectVolkswagenTest"/>
+            <class name="tests.login.LoginOrangeHRMTest"/>
         </classes>
     </test>
 </suite>
