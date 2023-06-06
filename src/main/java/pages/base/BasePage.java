@@ -1,6 +1,6 @@
 package pages.base;
 
-import com.sun.source.tree.AssertTree;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,5 +31,26 @@ public class BasePage {
         Assert.assertTrue(currentUrl.contains(text));
 
     }
+
+    public void clickSidebarButton(String text){
+        String xpath = String.format("//span[contains(@class, 'oxd-main-menu-item--name') and text()='%s']", text);
+        driver.findElement(By.xpath(xpath)).click();
+    }
+
+
+    public void clickOnElement(By element){
+        WebElement elem = driver.findElement(element);
+        waitElementIsVisible(elem);
+        elem.click();
+    }
+
+    public void clickLinkByText(String text){
+        String xpath = String.format("//a[text()='%s']", text);
+        WebElement link = driver.findElement(By.xpath(xpath));
+        waitElementIsVisible(link);
+        link.click();
+    }
+
+
 
 }

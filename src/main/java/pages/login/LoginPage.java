@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.base.BasePage;
 
+import static constants.Constant.Urls.ORANGE_HRM_URL;
+
 public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver){
@@ -59,6 +61,15 @@ public class LoginPage extends BasePage {
     public LoginPage filedLoginOrangeHRM(String login , String password){
         loginOrangeHRM(login, password);
         alertShouldBePresent();
+        return this;
+    }
+
+    public LoginPage loginOHRM(){
+        open(ORANGE_HRM_URL);
+        shouldBeLoginPage();
+        enterUsername("Admin");
+        enterPassword("admin123");
+        clickOnSubmitButton();
         return this;
     }
 }

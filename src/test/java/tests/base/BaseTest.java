@@ -10,6 +10,7 @@ import pages.dashboard.DashboardPage;
 import pages.home.HomePage;
 import pages.listing.VolkswagenListingPage;
 import pages.login.LoginPage;
+import pages.pim.PIMPage;
 
 import static common.Config.CLEAR_COOKIES_AND_STORAGE;
 import static common.Config.HOLD_BROWSER_OPEN;
@@ -22,6 +23,7 @@ public class BaseTest {
     protected VolkswagenListingPage volkswagenListingPage = new VolkswagenListingPage(driver);
     protected LoginPage loginPage = new LoginPage(driver);
     protected DashboardPage dashboardPage = new DashboardPage(driver);
+    protected PIMPage pimPage = new PIMPage(driver);
 
 
     @AfterTest
@@ -34,7 +36,7 @@ public class BaseTest {
         }
     }
 
-    @AfterSuite (alwaysRun = true)
+    @AfterTest (alwaysRun = true)
     public void close(){
         if (HOLD_BROWSER_OPEN) {
             driver.quit();
