@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testing.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test name="Test 1">
+
+    <listeners>
+        <listener class-name="utils.framework.SuiteListener"/>
+    </listeners>
+<!--    <test name="Test 1">-->
+<!--        <classes>-->
+<!--            <class name="tests.login.LoginOrangeHRMTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <parameter name="myParam" value="This is the value for a parameter"/>
+
+
+    <test name="Tests for Issue CRUD">
         <classes>
-            <class name="tests.login.LoginOrangeHRMTest"/>
+<!--            <class name="first.CreateIssueRawTest"/>-->
+            <!--<class name="second.CreateIssueWithJSonObjectTest"/>-->
+            <!--<class name="third.CreateIssueWithPOJOTest"/>-->
+            <class name="tests.forth.CreateIssueWithPOJOTest"/>
         </classes>
     </test>
 </suite>
